@@ -1,0 +1,13 @@
+body {
+    background-color: hsl(200, 53%, 70%);
+    border: 2px hsl(0, 0, 100);
+    padding: 20px;
+}
+h1  {
+    color: hsl(0,0%,0%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p   {
+    color: hsl(0,0%,0%);
+    font-family:Arial, Helvetica, sans-serif;
+}
