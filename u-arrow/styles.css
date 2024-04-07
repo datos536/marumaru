@@ -1,3 +1,15 @@
+/* Main Color Scheme used
+Solid Blue: #69d0ff rgb(105,208,255)
+Light Blue: #dff5ff rgb(223,245,255)
+
+Solid Red: #ff6985 rgb(255,105,133)
+Light Red: #ffdfe5 rgb(255,223,229)
+
+Solid Yellow: #ffe369 rgb(255,227,105)
+Light Yellow: #fff9df rgb(255,249,223)
+
+*/
+
 body {
-    background-color: rgb(223,245,255);
+    background-color: rgb(105,208,255);
 }
