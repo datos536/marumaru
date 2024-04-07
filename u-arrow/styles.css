@@ -11,10 +11,11 @@ Light Yellow: #fff9df rgb(255,249,223)
 */
 
 body {
-    background-color: rgb(105,208,255);
+    background-color:rgb(105,208,255) ;
 }
 
 .topmenu {
+  border: 3% solid rgb(105,208,255);
   border-radius: 3%;
-  float: inline-start;
+  float: left;
 }
