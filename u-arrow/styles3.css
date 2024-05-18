@@ -1,0 +1,143 @@
+/* ================*h2___MAIN============= */
+body,html {
+    background-color:rgb(105,208,255);
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+
+/* ===========*h2__HERO IMAGE============== */
+
+.welc-480 {
+    visibility: hidden;
+    display: none;
+    position:absolute;
+    width: 100%;
+  }
+  .welc-768 {
+    visibility: hidden;
+    display: none;
+    position: absolute;
+    width: 100%;
+  }
+  .welc-1024 {
+    visibility: hidden;
+    display: none;
+    position: absolute;
+    width: 100%;
+  }
+  .welc-1200 {
+    visibility: hidden;
+    display: none;
+    position: absolute;
+    width: 100%;
+  }
+
+  /* =========*h2 MENU ================*/
+.menu {
+    display:none;
+    position: relative;
+    visibility: hidden;
+    background-color: rgb(236, 236, 255);
+    width: 100%;
+    justify-content: center;
+  }
+
+  .menu-item {
+    list-style: none;
+  }
+
+  .menu-item + .menu-item {
+    margin-left: 1vw;
+  }
+
+  .menu-item a {
+    display:block;
+    text-decoration: none;
+    color: black;
+    padding:2.5vw;
+  }
+
+  .menu-item a:hover {
+    background-color: darkolivegreen;
+    transition:all 0.6s;
+  }
+
+  /* ============== *h2 MEDIA QUERIES =============== */
+  /* *h3 Smartphone <480 */
+@media screen and (max-width: 480px) {
+  .welc-480 {
+    visibility:visible;
+    display: block;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+
+  .menu {
+    visibility: hidden;
+    position:absolute;
+  }
+}
+
+/* *h3 tablet <768 */
+@media screen and (min-width:481px) and (max-width:768px) {
+    
+    .welc-768 {
+      visibility: visible;
+      display: block;
+      width: 100%;
+      padding: 0%;
+      margin: 0%;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+  }
+  }
+/* *h3 Laptop <1024 */
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+   
+  .welc-1024 {
+    visibility: visible;
+    display: block;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+}
+
+/* *h3 Desktop <1200 */
+@media screen and (min-width:1025px) and (max-width:1200px) {
+  .welc-1200 {
+    visibility: visible;
+    display: block;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+  
+}
+/* *h3 Large Screen >= 1200 */
+@media screen and (min-width:1201px) {
+  .welc-1200 {
+    visibility: visible;
+    display: block;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+}
