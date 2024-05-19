@@ -14,6 +14,10 @@ body,html {
 
 
 /* ===========*h2__HERO IMAGE============== */
+.hero-image {
+  position: static;
+}
+
 .welc-480 {
     display: none;
     position:absolute;
@@ -211,8 +215,8 @@ body,html {
     width: 100%;
     padding: 0%;
     margin: 0%;
-    position: absolute;
+    /* position: absolute;
     top: 0%;
-    left: 0%;
+    left: 0%; */
   }
 }
