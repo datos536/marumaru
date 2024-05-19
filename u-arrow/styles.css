@@ -1,0 +1,245 @@
+/* ================*h2___MAIN============= */
+body,html {
+    background-color:rgb(105,208,255);
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+
+
+/* ===========*h2__HERO IMAGE============== */
+.hero-image {
+  position: static;
+}
+
+.welc-480 {
+    display: none;
+    position:absolute;
+    width: 100%;
+  }
+  .welc-768 {
+    display: none;
+    position: absolute;
+    width: 100%;
+  }
+  .welc-1024 {
+    display: none;
+    position: absolute;
+    width: 100%;
+  }
+  .welc-1200 {
+    display: none;
+    position: absolute;
+    width: 100%;
+  }
+
+/* =========================*h2 Nav Hamburger ================ */
+.nav-icon {
+  position:fixed;
+  right: 1vw;
+  top: 1vw;
+  width: 42px;
+  height: 32px;
+  cursor: pointer;
+  }
+  .nav-icon span {
+  position: absolute;
+  width:50%;
+  height: 6px;
+  background: black;
+  transition: all 0.2s ease-in-out;
+  }
+ 
+  
+/* rounded ends */
+  .nav-icon span:nth-child(odd) {
+    left: 0;
+    border-radius: 9px 0 0 9px;
+  }
+  .nav-icon span:nth-child(even) {
+    left:50%;
+    border-radius: 0 9px 9px 0;
+  }
+  .nav-icon span:nth-child(1),
+  .nav-icon span:nth-child(2) {
+    top: 0;
+  }
+  .nav-icon span:nth-child(3),
+  .nav-icon span:nth-child(4) {
+    top:13px;
+  }
+  .nav-icon span:nth-child(5),
+  .nav-icon span:nth-child(6) {
+    top:26px;
+  }
+
+  /* when nav-open class, first and sixth spans rotate */
+  .nav-open .nav-icon span:nth-child(1),
+  .nav-open .nav-icon span:nth-child(6) {
+    transform: rotate(45deg);
+  }
+
+  .nav-open .nav-icon span:nth-child(2),
+  .nav-open .nav-icon span:nth-child(5) {
+    transform: rotate(-45deg);
+  }
+
+  .nav-open .nav-icon span:nth-child(1) {
+    top:8px;
+    left:5px;
+  }
+  .nav-open .nav-icon span:nth-child(2) {
+    top:8px;
+    left:calc(50% - 5px);
+  }
+
+  .nav-open .nav-icon span:nth-child(3) {
+    left: -100%;
+    opacity:0;
+  }
+
+  .nav-open .nav-icon span:nth-child(4) {
+    left: 150%;
+    opacity: 0;
+  }
+  
+  .nav-open .nav-icon span:nth-child(5) {
+    top: 19px;
+    left: 5px;
+  }
+  
+  .nav-open .nav-icon span:nth-child(6) {
+    top:19px;
+    left: calc(50% - 5px)
+  }
+
+/* Offscreen menu */
+
+.off-screen-menu {
+  background-color: rgba(255, 207, 136,.9);
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position:fixed;
+  top:0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  transition: .4s ease;
+}
+
+.off-screen-menu li {
+  list-style: none;
+}
+
+.off-screen-menu.active {
+  right: 0;
+
+}
+
+  /* =========*h2 MENU ================*/
+.menu {
+    display:none;
+    position: relative;
+    background-color: rgb(236, 236, 255);
+    width: 100%;
+    justify-content: center;
+  }
+
+  .menu-item {
+    list-style: none;
+  }
+
+  .menu-item + .menu-item {
+    margin-left: 1vw;
+  }
+
+  .menu-item a {
+    display:block;
+    text-decoration: none;
+    color: black;
+    padding:2.5vw;
+  }
+
+  .menu-item a:hover {
+    background-color: darkolivegreen;
+    transition:all 0.6s;
+  }
+
+  /* ============== *h2 MEDIA QUERIES =============== */
+  /* *h3 Smartphone <480 */
+@media screen and (max-width: 480px) {
+  .welc-480 {
+    display: block;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+
+  .menu {
+    display:none;
+    position:absolute;
+  }
+}
+
+/* *h3 tablet <768 */
+@media screen and (min-width:481px) and (max-width:768px) {
+    
+    .welc-768 {
+      display: block;
+      width: 100%;
+      padding: 0%;
+      margin: 0%;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+  }
+  }
+/* *h3 Laptop <1024 */
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+   
+  .welc-1024 {
+    display: block;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+}
+
+/* *h3 Desktop <1200 */
+@media screen and (min-width:1025px) and (max-width:1200px) {
+  .welc-1200 {
+    display: block;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+  
+}
+/* *h3 Large Screen >= 1200 */
+@media screen and (min-width:1201px) {
+  .welc-1200 {
+    display: block;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+}
