@@ -1,7 +1,5 @@
-$(function(){
-    $('.btn-trigger').on('click', function() {
-      $(this).toggleClass('active');
-      return false;
-    });
+$(document).ready(function() {
+  $('.nav-icon').click(function() {
+      $('body').toggleClass('nav-open');
   });
-  
+});

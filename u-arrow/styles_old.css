@@ -22,27 +22,24 @@ body,html {
 
 /* ===========*__HERO IMAGE============== */
 
-.welc-480 {
-  visibility: hidden;
-  position: absolute;
+.hero-image {
+  background-size:cover;
+  background-image: url(./images/3smiles.jpeg);
+  background-position:center;
+  height:100vh;
+  padding:0px;
   width: 100%;
-}
-.welc-768 {
-  visibility: hidden;
-  position: absolute;
-  width: 100%;
-}
-.welc-1024 {
-  visibility: hidden;
-  position: absolute;
-  width: 100%;
-}
-.welc-1200 {
-  visibility: hidden;
-  position: absolute;
-  width: 100%;
+  position:relative;
 }
 
+.hero-text {
+  text-align: left;
+  position: absolute;
+  /* top: 2%; */
+  /* left: 2%; */
+  width: 100%;
+
+}
 
 /* =========*__ MENU */
 .menu {
@@ -57,18 +54,15 @@ body,html {
 }
 
 .topmenu {
-  /* "menu-item */
   list-style: none;
     /* background-color: rgb(243, 243, 255);   */
 }
 
 .topmenu +.topmenu {
-  /* menu-item + menu-item */
   margin-left: 1vw;
 }
 
 .topmenu a {
-  /* menu-item */
   display: block;
   text-decoration: none;
   color: black;
@@ -76,13 +70,12 @@ body,html {
   }
 
 .topmenu a:hover {
-  /* menu-item */
   background-color: brown;
   transition: all 0.6s;
 }
 
 /* *_======================== HAMBURGER MENU BUTTON START========================== */
-.btn-trigger {
+/* .btn-trigger {
   position: relative;
   width: 50px;
   height: 44px;
@@ -129,23 +122,33 @@ body,html {
 /* ==========*_0 MOBILE MEDIA QUERY===================================================================== */
 
 /* ----------*_1 HERO IMAGE ----------- */
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 599px) {
     /* MOBILE image*/
-    .welc-480 {
+    .welcome-599 {
       visibility:visible;
-      width: 100%;
+      width: 95vw;
       padding: 0%;
       margin: 0%;
       position: absolute;
       top: 0%;
       left: 0%;
     }
-  
-    .menu {
+    
+    /* MIDSIZE image*/
+    .welcome600-999 {
+      visibility:hidden;
+    }
+
+    /* LARGE image*/
+    .welcome1000plus {
+      visibility: hidden;
+    }
+
+    .menu  {
       visibility: hidden;
       position:absolute;
     }
-  
+
     /* *_------------------- NAV BUTTON ------------------- */
       body {
         animation: bugfix infinite 1s;
@@ -261,7 +264,8 @@ body,html {
       #overlay ul li a:hover {
         color: #000!important;
       }
-  }
+    }
+    
     /* --------------------- MOBILE NAV BUTTON -------------------- */
 
 
@@ -270,18 +274,28 @@ body,html {
 
 /* ===========MID-SIZE MEDIA QUERY =========================================================================== */
 
-  @media screen and (max-width:768px) {
+  @media screen and (min-width:600px) {
     
     /* MOBILE */
-     .welc-768 {
+    .welcome-599 {
+      visibility: hidden;
+  }
+    
+    /* MIDSIZE */
+    .welcome600-999 {
       visibility: visible;
-      width: 100%;
+      width: 95vw;
       padding: 0%;
       margin: 0%;
       position: absolute;
       top: 0%;
       left: 0%;
     }
+
+
+    /* LARGE */
+    .welcome1000plus {
+      visibility: hidden;
     }
 /* --------------------- Hiding Mobile Nav Button ------------------- */
   .navbutton{
@@ -291,21 +305,32 @@ body,html {
   .menu {
     font-size: 1.5rem;
   }
+  
+  
+
+  }
 
 
   /* ==========*_WIDE PC=============== */
-  @media screen and (max-width:1024px) {
-   
-   .welc-1024 {
+  @media screen and (min-width:1088px) {
+   .welcome-599{
+   visibility: hidden;
+   }
+
+   .welcome600-999 {
+    visibility: hidden;
+   }
+
+   .welcome1000plus {
     visibility: visible;
-    width: 100%;
+    width: 95vw;
     padding: 0%;
     margin: 0%;
     position: absolute;
     top: 0%;
     left: 0%;
    }
-   
+
    /* --------------------- Hiding Mobile Nav Button ------------------- */
    .navbutton{
     visibility: collapse;
@@ -315,12 +340,4 @@ body,html {
    .menu  {
     font-size: 2rem;
    }
-  }
-
-
-  @media screen and (max-width:1200px) {
-    
-    .welc-1200 {
-      visibility:visible;
-    }
   }

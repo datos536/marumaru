@@ -1,343 +1,222 @@
-/* Main Color Scheme used
-Solid Blue: #69d0ff rgb(105,208,255)
-Light Blue: #dff5ff rgb(223,245,255)
-
-Solid Red: #ff6985 rgb(255,105,133)
-Light Red: #ffdfe5 rgb(255,223,229)
-
-Solid Yellow: #ffe369 rgb(255,227,105)
-Light Yellow: #fff9df rgb(255,249,223)
-
-*/
-
-/* ================*___MAIN============= */
-
+/* ================*h2___MAIN============= */
 body,html {
-  background-color:rgb(105,208,255);
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
+    background-color:rgb(105,208,255);
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+
+  /* =================================== *H1 testing==================== */
+.testing {
+  z-index: 4;
 }
 
-/* ===========*__HERO IMAGE============== */
 
+/* ===========*h2__HERO IMAGE============== */
 .hero-image {
-  background-size:cover;
-  background-image: url(./images/3smiles.jpeg);
-  background-position:center;
-  height:100vh;
-  padding:0px;
-  width: 100%;
-  position:relative;
+  position: static;
 }
 
-.hero-text {
-  text-align: left;
-  position: absolute;
-  /* top: 2%; */
-  /* left: 2%; */
-  width: 100%;
-
-}
-
-/* =========*__ MENU */
-.menu {
-  display:flex;
-  flex-wrap: wrap;
-  position: absolute;
-  bottom: 0%;
-  background-color: rgb(236, 236, 255);
-  width: 100%;
-  justify-content: center;
-  /* font-size: 1.5rem; */
-}
-
-.topmenu {
-  list-style: none;
-    /* background-color: rgb(243, 243, 255);   */
-}
-
-.topmenu +.topmenu {
-  margin-left: 1vw;
-}
-
-.topmenu a {
-  display: block;
-  text-decoration: none;
-  color: black;
-  padding:2.5vw; 
+.welc-480 {
+    display: none;
+    position:absolute;
+    width: 100%;
   }
-
-.topmenu a:hover {
-  background-color: brown;
-  transition: all 0.6s;
-}
-
-/* *_======================== HAMBURGER MENU BUTTON START========================== */
-/* .btn-trigger {
-  position: relative;
-  width: 50px;
-  height: 44px;
-  cursor: pointer;
-}
-.btn-trigger span {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: #fff;
-  border-radius: 4px;
-}
-.btn-trigger, .btn-trigger span {
-  display: inline-block;
-  transition: all .5s;
-  box-sizing: border-box;
-}
-.btn-trigger span:nth-of-type(1) {
-  top: 0;
-}
-.btn-trigger span:nth-of-type(2) {
-  top: 20px;
-}
-.btn-trigger span:nth-of-type(3) {
-  bottom: 0;
-}
-
-#btn01.active span:nth-of-type(1) {
-  -webkit-transform: translateY(20px) rotate(-45deg);
-  transform: translateY(20px) rotate(-45deg);
-}
-#btn01.active span:nth-of-type(2) {
-  opacity: 0;
-}
-#btn01.active span:nth-of-type(3) {
-  -webkit-transform: translateY(-20px) rotate(45deg);
-  transform: translateY(-20px) rotate(45deg);
-} */
-/* ======================== HAMBURGER MENU BUTTON END========================== */
-
-/* ========== *_00 MEDIA QUERIES ============ */
-
-/* ==========*_0 MOBILE MEDIA QUERY===================================================================== */
-
-/* ----------*_1 HERO IMAGE ----------- */
-  @media screen and (max-width: 599px) {
-    /* MOBILE image*/
-    .welcome-599 {
-      visibility:visible;
-      width: 95vw;
-      padding: 0%;
-      margin: 0%;
-      position: absolute;
-      top: 0%;
-      left: 0%;
-    }
-    
-    /* MIDSIZE image*/
-    .welcome600-999 {
-      visibility:hidden;
-    }
-
-    /* LARGE image*/
-    .welcome1000plus {
-      visibility: hidden;
-    }
-
-    .menu  {
-      visibility: hidden;
-      position:absolute;
-    }
-
-    /* *_------------------- NAV BUTTON ------------------- */
-      body {
-        animation: bugfix infinite 1s;
-        -webkit-animation: bugfix infinite 1s;}
-      
-      @keyframes bugfix {
-        from {
-          padding: 0;
-        }
-        to {
-          padding: 0;
-        }
-      }
-      @-webkit-keyframes bugfix {
-        from {
-          padding: 0;
-        }
-        to {
-          padding: 0;
-        }
-      }
-      #overlay-button {
-        position: absolute;
-        right: 2em;
-        top: 3em;
-        padding: 26px 11px;
-        z-index: 5;
-        cursor: pointer;
-        user-select: none;
-      }
-      #overlay-button span {
-        height: 4px;
-        width: 35px;
-        border-radius: 2px;
-        background-color: rgb(0, 0, 0);
-        position: absolute;
-        display: block;
-        transition: all .2s ease-in-out;
-      }
-      #overlay-button span:before {
-        top: -10px;
-        visibility: visible;
-      }
-      #overlay-button span:after {
-        top: 10px;
-      }
-      #overlay-button span:before, #overlay-button span:after {
-        height: 4px;
-        width: 35px;
-        border-radius: 2px;
-        background-color: rgb(0, 0, 0);
-        position: absolute;
-        content: "";
-        transition: all .2s ease-in-out;
-      }
-      #overlay-button:hover span, #overlay-button:hover span:before, #overlay-button:hover span:after {
-        background: #000000;
-      }
-      
-      input[type=checkbox] {
-        display: none; 
-        
-      }
-      
-      input[type=checkbox]:checked ~ #overlay {
-        visibility: visible; 
-      }
-      
-      input[type=checkbox]:checked ~ #overlay-button:hover span, input[type=checkbox]:checked ~ #overlay-button span {
-        background: transparent;
-        
-        
-      }
-      input[type=checkbox]:checked ~ #overlay-button span:before {
-        transform: rotate(45deg) translate(7px, 7px);
-      
-      }
-      input[type=checkbox]:checked ~ #overlay-button span:after {
-        transform: rotate(-45deg) translate(7px, -7px);
-      
-      
-      }
-      
-      #overlay {
-        height: 100vh;
-        width: 100vw;
-        background: #ec6451;
-        z-index: 2;
-        visibility: hidden;
-        position: fixed;
-      }
-      #overlay.active {
-      
-      }
-      #overlay ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        height: 100vh;
-        padding-left: 0;
-        list-style-type: none;
-      }
-      #overlay ul li {
-        padding: 1em;
-      }
-      #overlay ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.5em;
-      }
-      #overlay ul li a:hover {
-        color: #000!important;
-      }
-    }
-    
-    /* --------------------- MOBILE NAV BUTTON -------------------- */
-
-
-    
-  
-
-/* ===========MID-SIZE MEDIA QUERY =========================================================================== */
-
-  @media screen and (min-width:600px) {
-    
-    /* MOBILE */
-    .welcome-599 {
-      visibility: hidden;
-  }
-    
-    /* MIDSIZE */
-    .welcome600-999 {
-      visibility: visible;
-      width: 95vw;
-      padding: 0%;
-      margin: 0%;
-      position: absolute;
-      top: 0%;
-      left: 0%;
-    }
-
-
-    /* LARGE */
-    .welcome1000plus {
-      visibility: hidden;
-    }
-/* --------------------- Hiding Mobile Nav Button ------------------- */
-  .navbutton{
-    visibility: collapse;
+  .welc-768 {
+    display: none;
     position: absolute;
+    width: 100%;
   }
-  .menu {
-    font-size: 1.5rem;
+  .welc-1024 {
+    display: none;
+    position: absolute;
+    width: 100%;
+  }
+  .welc-1200 {
+    display: none;
+    position: absolute;
+    width: 100%;
+  }
+
+/* =========================*h2 Nav Hamburger ================ */
+.nav-icon {
+  position:absolute;
+  right: 1vw;
+  top: 1vw;
+  width: 42px;
+  height: 32px;
+  cursor: pointer;
+  }
+  .nav-icon span {
+  position: absolute;
+  width:50%;
+  height: 6px;
+  background: black;
+  transition: all 0.2s ease-in-out;
+  }
+ 
+  
+/* rounded ends */
+  .nav-icon span:nth-child(odd) {
+    left: 0;
+    border-radius: 9px 0 0 9px;
+  }
+  .nav-icon span:nth-child(even) {
+    left:50%;
+    border-radius: 0 9px 9px 0;
+  }
+  .nav-icon span:nth-child(1),
+  .nav-icon span:nth-child(2) {
+    top: 0;
+  }
+  .nav-icon span:nth-child(3),
+  .nav-icon span:nth-child(4) {
+    top:13px;
+  }
+  .nav-icon span:nth-child(5),
+  .nav-icon span:nth-child(6) {
+    top:26px;
+  }
+
+  /* when nav-open class, first and sixth spans rotate */
+  .nav-open .nav-icon span:nth-child(1),
+  .nav-open .nav-icon span:nth-child(6) {
+    transform: rotate(45deg);
+  }
+
+  .nav-open .nav-icon span:nth-child(2),
+  .nav-open .nav-icon span:nth-child(5) {
+    transform: rotate(-45deg);
+  }
+
+  .nav-open .nav-icon span:nth-child(1) {
+    top:8px;
+    left:5px;
+  }
+  .nav-open .nav-icon span:nth-child(2) {
+    top:8px;
+    left:calc(50% - 5px);
+  }
+
+  .nav-open .nav-icon span:nth-child(3) {
+    left: -100%;
+    opacity:0;
+  }
+
+  .nav-open .nav-icon span:nth-child(4) {
+    left: 150%;
+    opacity: 0;
   }
   
+  .nav-open .nav-icon span:nth-child(5) {
+    top: 19px;
+    left: 5px;
+  }
   
-
+  .nav-open .nav-icon span:nth-child(6) {
+    top:19px;
+    left: calc(50% - 5px)
   }
 
+  /* =========*h2 MENU ================*/
+.menu {
+    display:none;
+    position: relative;
+    background-color: rgb(236, 236, 255);
+    width: 100%;
+    justify-content: center;
+  }
 
-  /* ==========*_WIDE PC=============== */
-  @media screen and (min-width:1088px) {
-   .welcome-599{
-   visibility: hidden;
-   }
+  .menu-item {
+    list-style: none;
+  }
 
-   .welcome600-999 {
-    visibility: hidden;
-   }
+  .menu-item + .menu-item {
+    margin-left: 1vw;
+  }
 
-   .welcome1000plus {
-    visibility: visible;
-    width: 95vw;
+  .menu-item a {
+    display:block;
+    text-decoration: none;
+    color: black;
+    padding:2.5vw;
+  }
+
+  .menu-item a:hover {
+    background-color: darkolivegreen;
+    transition:all 0.6s;
+  }
+
+  /* ============== *h2 MEDIA QUERIES =============== */
+  /* *h3 Smartphone <480 */
+@media screen and (max-width: 480px) {
+  .welc-480 {
+    display: block;
+    width: 100%;
     padding: 0%;
     margin: 0%;
     position: absolute;
     top: 0%;
     left: 0%;
-   }
-
-   /* --------------------- Hiding Mobile Nav Button ------------------- */
-   .navbutton{
-    visibility: collapse;
-    position: absolute;
-   }
-   
-   .menu  {
-    font-size: 2rem;
-   }
   }
+
+  .menu {
+    display:none;
+    position:absolute;
+  }
+}
+
+/* *h3 tablet <768 */
+@media screen and (min-width:481px) and (max-width:768px) {
+    
+    .welc-768 {
+      display: block;
+      width: 100%;
+      padding: 0%;
+      margin: 0%;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+  }
+  }
+/* *h3 Laptop <1024 */
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+   
+  .welc-1024 {
+    display: block;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+}
+
+/* *h3 Desktop <1200 */
+@media screen and (min-width:1025px) and (max-width:1200px) {
+  .welc-1200 {
+    display: block;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+  
+}
+/* *h3 Large Screen >= 1200 */
+@media screen and (min-width:1201px) {
+  .welc-1200 {
+    display: block;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+}
