@@ -37,11 +37,11 @@
     <div class="off-screen-menu">
         <ul>
             <li>Home</li>
-            <li>コースのご案内</li>
-            <li>講師の紹介</li>
-            <li>料金</li>
-            <li>よくあるご質問</li>
-            <li>お問い合わせ</li>
+            <li>Lessons</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>5</li>
+            <li>6</li>
         </ul>
     </div>
 
@@ -53,7 +53,17 @@
         <span></span>
         <span></span>
     </div>
-    <div><h1 class="testing">test</h1></div>
+
+<h1> Hello</h1>
+
+
+<?php
+echo '<div><h1 class="testing">test</h1></div>
+';
+?>
+
+<?='mango'?>
+
 
 </body>
 
