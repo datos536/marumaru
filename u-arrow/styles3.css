@@ -10,6 +10,7 @@ body,html {
 /* ==========*h2 Nav Hamburger */
 .nav-icon {
   position: fixed;
+  z-index: 100;
   right: 1vw;
   top: 1vw;
   width: 42px;
