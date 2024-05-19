@@ -7,28 +7,103 @@ body,html {
     font-size: 16px;
   }
 
+/* ==========*h2 Nav Hamburger */
+.nav-icon {
+  position: fixed;
+  right: 1vw;
+  top: 1vw;
+  width: 42px;
+  height: 32px;
+  cursor: pointer;
+  }
+  .nav-icon span {
+  position: absolute;
+  width:50%;
+  height: 6px;
+  background: black;
+  transition: all 0.2s ease-in-out;
+  }
+/* rounded left ends */
+  .nav-icon span:nth-child(odd) {
+    left: 0;
+    border-radius: 9px 0 0 9px;
+  }
+/* rounded right ends */
+  .nav-icon span:nth-child(even) {
+    left:50%;
+    border-radius: 0 9px 9px 0;
+  }
+/* vertical positioning of hamburger*/
+  .nav-icon span:nth-child(1),
+  .nav-icon span:nth-child(2) {
+    top: 0;
+  }
+  .nav-icon span:nth-child(3),
+  .nav-icon span:nth-child(4) {
+    top:13px;
+  }
+  .nav-icon span:nth-child(5),
+  .nav-icon span:nth-child(6) {
+    top:26px;
+  }
+
+  /* when nav-open class, first and sixth spans rotate */
+  .nav-open .nav-icon span:nth-child(1),
+  .nav-open .nav-icon span:nth-child(6) {
+    transform: rotate(45deg);
+  }
+
+  .nav-open .nav-icon span:nth-child(2),
+  .nav-open .nav-icon span:nth-child(5) {
+    transform: rotate(-45deg);
+  }
+
+  .nav-open .nav-icon span:nth-child(1) {
+    top:8px;
+    left:5px;
+  }
+  .nav-open .nav-icon span:nth-child(2) {
+    top:8px;
+    left:calc(50% - 5px);
+  }
+
+  .nav-open .nav-icon span:nth-child(3) {
+    left: -100%;
+    opacity:0;
+  }
+
+  .nav-open .nav-icon span:nth-child(4) {
+    left: 150%;
+    opacity: 0;
+  }
+  
+  .nav-open .nav-icon span:nth-child(5) {
+    top: 19px;
+    left: 5px;
+  }
+  
+  .nav-open .nav-icon span:nth-child(6) {
+    top:19px;
+    left: calc(50% - 5px)
+  }
 /* ===========*h2__HERO IMAGE============== */
 
 .welc-480 {
-    visibility: hidden;
     display: none;
     position:absolute;
     width: 100%;
   }
   .welc-768 {
-    visibility: hidden;
     display: none;
     position: absolute;
     width: 100%;
   }
   .welc-1024 {
-    visibility: hidden;
     display: none;
     position: absolute;
     width: 100%;
   }
   .welc-1200 {
-    visibility: hidden;
     display: none;
     position: absolute;
     width: 100%;
@@ -38,7 +113,6 @@ body,html {
 .menu {
     display:none;
     position: relative;
-    visibility: hidden;
     background-color: rgb(236, 236, 255);
     width: 100%;
     justify-content: center;
@@ -68,7 +142,6 @@ body,html {
   /* *h3 Smartphone <480 */
 @media screen and (max-width: 480px) {
   .welc-480 {
-    visibility:visible;
     display: block;
     width: 100%;
     padding: 0%;
@@ -79,7 +152,7 @@ body,html {
   }
 
   .menu {
-    visibility: hidden;
+    display:none;
     position:absolute;
   }
 }
@@ -88,7 +161,6 @@ body,html {
 @media screen and (min-width:481px) and (max-width:768px) {
     
     .welc-768 {
-      visibility: visible;
       display: block;
       width: 100%;
       padding: 0%;
@@ -103,7 +175,6 @@ body,html {
 @media screen and (min-width:769px) and (max-width:1024px) {
    
   .welc-1024 {
-    visibility: visible;
     display: block;
     width: 100%;
     padding: 0%;
@@ -117,7 +188,6 @@ body,html {
 /* *h3 Desktop <1200 */
 @media screen and (min-width:1025px) and (max-width:1200px) {
   .welc-1200 {
-    visibility: visible;
     display: block;
     width: 100%;
     padding: 0%;
@@ -131,7 +201,6 @@ body,html {
 /* *h3 Large Screen >= 1200 */
 @media screen and (min-width:1201px) {
   .welc-1200 {
-    visibility: visible;
     display: block;
     width: 100%;
     padding: 0%;
